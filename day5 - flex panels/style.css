@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.panels {
+    display: flex;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.panel {
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    transition:
+        font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+        flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11);
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Segoe UI Light', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.panel > * {
+    flex: 1 0 auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    transition:transform 0.5s;
+}
+
+.panel > *:first-child {
+    transform: translateY(-100%);
+}
+.panel > *:last-child {
+    transform: translateY(100%);
+}
+.open {
+    flex: 5;
+    font-size: 30px;
+}
+.open-panel > *:first-child, .open-panel > *:last-child {
+    transform: translateY(0);
+}
+
+.panel1 {
+    background: RED;
+}
+
+.panel2 {
+    background: green;
+}
+
+.panel3 {
+    background: blue;
+}
+
+.panel4 {
+    background: orange;
+}
+
+.panel5 {
+    background: blue;
+}
+
+.panel6 {
+    background: green;
+}
